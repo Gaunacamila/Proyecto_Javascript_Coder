@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="main.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
     <title> MY Tarea :)</title>
 </head>
 <body>
-    
+        
+            <div class="titulo"> </div>
+        
+
+
+        <div class="saldo"> 
+            <h4>Ultimos movimientos : </h4>   
+        
+        </div>
+   
+        <div>
+            <h3>Agregar movimientos</h3>
+            <form>
+                <div className='form-control'>
+                    <label htmlFor='Historial'>Categoria</label>
+                    <input type="text"  placeholder='Ejemplo :  Helado..'/>
+                    </div>
+                    <div className='form-control'>
+                        <label form='amount'>Monto $<br />
+                        (En negativo - Egreso, En positivo - Ingreso)
+                        </label>
+                    <input type="number"  placeholder='Ingrese monto ...'></input>
+                </div>
+                <button class='btn' onclick="mensaje()">Agregar movimiento</button>
+            </form>
+        </div>
+        <script src="main.js"></script>
 </body>
 </html>

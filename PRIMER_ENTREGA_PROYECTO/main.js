@@ -1,7 +1,7 @@
 class Tutor {
     constructor(pNombre, pEmpresa ){
-        this.nombre = []
-        this.empresa = []
+        this.nombre = pNombre
+        this.empresa = pEmpresa
         
     }
 }
@@ -9,8 +9,8 @@ class Tutor {
 class Movimiento {
     constructor(pFecha, pIngreso , pEgreso  ,todosLosMovimientos,pInformacion){
         this.fecha = pFecha
-        this.ingreso = []
-        this.egreso = []
+        this.ingreso = pIngreso
+        this.egreso = pEgreso
         this.todosLosMovimientos = todosLosMovimientos
         this.informacion = pInformacion
     }
@@ -21,7 +21,7 @@ class Movimiento {
             sumar += this.todosLosMovimientos[i]
             
         }
-        console.log("La suma Total es ", sumar);
+        console.log("Su saldo actual es",sumar);
     }
     
 }
@@ -37,19 +37,17 @@ let debito =[Movimiento.debito]
 debito.push(egreso)
 
 
+ let nombre =  prompt("Ingrese su nombre")
+ let empresa =  prompt("Ingrese su Empresa Ejemplo :Coder ")
+const tutor1 = new Tutor(nombre,empresa)
 
-let nombre = []
-const tutor1 = new Tutor("","")
-tutor1.nombre = prompt("Ingrese su nombre")
-tutor1.empresa = prompt("Ingrese su Empresa Ejemplo :Coder ")
-nombre.push(tutor1)
-console.log(nombre)
+
 
 let todosLosMovimientos = ingreso.concat(egreso)
 
 
 
-const movimiento1 = new Movimiento(new Date(),ingreso ,egreso, todosLosMovimientos ,nombre)
+const movimiento1 = new Movimiento(new Date(),ingreso ,egreso, todosLosMovimientos ,tutor1)
 
 
 if (tutor1.nombre != "" && tutor1.empresa != ""    ){
@@ -61,4 +59,30 @@ console.log(movimiento1)
 }
 
 
+const initSesion = () => {
+    const bienvenida = document.querySelector(".titulo")
+    const name = document.createElement("h1")
+    name.textContent = `Bienvenido ${tutor1.nombre}`
+    bienvenida.appendChild(name)
+   
+}
 
+initSesion()
+
+
+
+const mostrarSaldo = () => {
+    const saldoUsuario = document.querySelector(".saldo")
+    const saldo = document.createElement("spam")
+    saldo.textContent = movimiento1.todosLosMovimientos
+    saldoUsuario.appendChild(saldo)
+
+
+}
+
+mostrarSaldo()
+
+
+function mensaje(){
+    alert("Oppsi  !! , proximamente se va a agregar")
+}
