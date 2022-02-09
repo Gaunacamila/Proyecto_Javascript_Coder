@@ -76,7 +76,7 @@ input[type='number'] {
   width: 100%;
 }
 
-.btn {
+#btn {
   cursor: pointer;
   background-color: #df1289;
   box-shadow: var(--box-shadow);

@@ -37,8 +37,10 @@ let debito =[Movimiento.debito]
 debito.push(egreso)
 
 
- let nombre =  prompt("Ingrese su nombre")
- let empresa =  prompt("Ingrese su Empresa Ejemplo :Coder ")
+ //let nombre =  prompt("Ingrese su nombre")
+ //let empresa =  prompt("Ingrese su Empresa Ejemplo :Coder ")
+ let nombre ="Camila"
+ let empresa = "Coder"
 const tutor1 = new Tutor(nombre,empresa)
 
 
@@ -76,13 +78,26 @@ const mostrarSaldo = () => {
     const saldo = document.createElement("spam")
     saldo.textContent = movimiento1.todosLosMovimientos
     saldoUsuario.appendChild(saldo)
-
+    
 
 }
 
 mostrarSaldo()
 
-
+/*
 function mensaje(){
     alert("Oppsi  !! , proximamente se va a agregar")
 }
+
+*/
+
+//let button = document.getElementById('btn').addEventListener('click',)
+
+const addMovement = () => {
+
+    let button = document.getElementById('btn').addEventListener('click', function mensaje(){
+        alert("Oppsi  !! , proximamente se va a agregar");
+         
+     
+    
+        
